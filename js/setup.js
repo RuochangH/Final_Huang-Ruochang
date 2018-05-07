@@ -26,7 +26,7 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
 }).addTo(map);
 
 
-var liveURL = 'https://raw.githubusercontent.com/RuochangH/OST4GIS-Midterm/master/mapfinal.geojson';
+var liveURL = 'https://raw.githubusercontent.com/RuochangH/Final_Huang-Ruochang/master/map.geojson';
 var featureGroup;
 
 $(document).ready(function(){
