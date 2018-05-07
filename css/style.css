@@ -1,0 +1,91 @@
+.sidebar {
+  position:absolute;
+  width:340px;
+  z-index: 10;
+  height: 100%;
+  margin-right: 6px;
+  margin-left: 6px;
+  margin-top: -6px;
+  font-family:Franklin Gothic Book;
+}
+
+#shade1{
+  position:absolute;
+  top:15px;
+  left:35px;
+  opacity:0.30;
+}
+
+#shade2{
+  position:absolute;
+  top:15px;
+  left:56px;
+  opacity:0.50;
+}
+
+#solid{
+  position:absolute;
+  top:15px;
+  left:80px;
+}
+
+#name{
+  font-family: AppleGothic;
+  font-weight: bold;
+  text-align: center;
+}
+
+#process{
+  position:absolute;
+  top:200px;
+  width:334px;
+}
+
+.card-header{
+  background-color: white;
+}
+.map {
+    position: absolute;
+    right: 0px;
+    left: 340px;
+    height: 100%;
+    top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* =============
+Media Queries
+============= */
+
+
+.street-selected path {
+  -webkit-animation: active 5s ease-out;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes active {
+    0% {opacity: 1;}
+    50% {opacity: 1; stroke-width: 10;}
+    100% {opacity: 1;}
+}
+
+@media screen and (min-width: 480px) and (max-width: 800px) {
+    /*.item {
+        background-color: blue;
+    }*/
+}
+
+@media screen and (max-width: 479px) {
+    /*.item {
+        background-color: red;
+    }*/
+}
