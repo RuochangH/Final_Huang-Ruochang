@@ -26,23 +26,22 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
 }).addTo(map);
 
 
-var liveURL = 'https://www.rideindego.com/stations/json/';
+var liveURL = 'https://raw.githubusercontent.com/RuochangH/OST4GIS-Midterm/master/mapfinal.geojson';
 var featureGroup;
 
 $(document).ready(function(){
   $.ajax(liveURL).done(function(data) {
     var parsedData = JSON.parse(data);
-    //console.log(parsedData);
+    console.log(parsedData);
       if(featureGroup != undefined){
         map.removeLayer(featureGroup);
       }
-
       //plot
       featureGroup = L.geoJson((parsedData),{
       //filter:myFilter1,
       pointToLayer:function(feature, latlng){
         var MarkerOption = {
-          radius: feature.properties.bikesAvailable,
+          radius: 2,
           weight: 1,
           opacity: 0.8,
           color:'white',
