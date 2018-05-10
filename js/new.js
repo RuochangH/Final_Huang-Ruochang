@@ -620,6 +620,20 @@ function onUp(e) {
                         "coordinates": coor2
                     }
                 };
+/*
+                var cen = {
+                  "type":"Feature",
+                  "geometry":{
+                    "type":"Point",
+                    "coordinates":[user[0],user[1]]
+                  }
+                };
+
+                var bounds = {
+                  "type":"FeatureCollection",
+                  "features":[cen,coorr,coorr2]
+                };
+*/
 
                 map.addSource(
                   'coorr2',{
@@ -637,9 +651,16 @@ function onUp(e) {
                       'circle-radius':12
                     }
                   },'hist');
+
                   console.log(user);
                   console.log(coor);
                   console.log(coor2);
+
+                //  map.fitBounds([[user[0],user[1]],[coor[0],coor[1]],[coor2[0],coor2[1]]],{
+                //    padding: {top: 25, bottom:25, left: 25, right: 25}
+                //  });
+
+
 
 
 
@@ -667,7 +688,7 @@ function onUp(e) {
                                           console.log(route2);
 
                                           $('#route').click(function(){
-                                            $("#all").show;
+                                            $("#all").show();
 
                                             if(map.getLayer('route')){
                                             map.removeLayer('route');
